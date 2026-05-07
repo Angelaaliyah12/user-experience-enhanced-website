@@ -157,19 +157,36 @@ body {
 
 .opslaan-knop {
   position: absolute;
-  top: 10px;
-  /* verplaatsing naar boven in de product kaart img */
-  right: 10px;
-  /* verplaatsing van rechts in de product kaart img */
+  top: 10px; /* verplaatsing naar boven in de product kaart img */
+  right: 10px; /* verplaatsing van rechts in de product kaart img */
   background: white;
-  border-radius: 50%;
+  border-radius: 50px;
+  border-color: #B20000;
   cursor: pointer;
   padding: 7px;
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background: #f1f0f0;
+  }
+}
+.loading{
+  color:#B20000;
+  background-color: white;
+  border-color: #B20000;
+}
+.error{
+  color: white;
+  background-color: red;
+}
+.saved{
+  color: white;
+  background-color: #B20000;
+  border-color: white;
+  &:hover{
+    background: #790000;
+  }
 }
 
-.opslaan {
-  width: 30px;
-}
 
 .categorie-paginas a {
   color: white;
