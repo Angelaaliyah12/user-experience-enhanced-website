@@ -12,6 +12,7 @@ forms.forEach(form => {/*voor elke form op de pagina, voeg een event listener to
     //  Loading state
     button.classList.add("loading")/*voeg een class toe aan de knop zodat we deze kunnen stylen tijdens het submitte*/
     button.textContent = "Saving..."/*verander de tekst van de button zodat de gebruiker weet dat er iets gebeurt*/
+    button.disabled = true/*zet de button uit zodat er niet meerdere keren op geklikt kan worden tijdens het submitten bron: https://coreui.io/blog/how-to-disable-a-button-in-javascript/*/
 
     let formData = new FormData(form)
 
@@ -24,6 +25,7 @@ forms.forEach(form => {/*voor elke form op de pagina, voeg een event listener to
     if (response.ok) {
       button.classList.remove("loading")/*verwijder de loading class*/
       button.classList.add("saved")/*voeg class saved toe*/
+      button.disabled = false /*zet de button weer aan*/
       button.textContent = "Saved ✔"
     } else {
       button.classList.remove("loading")/*verwijder de loading class*/
