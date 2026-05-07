@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+    <link rel="stylesheet" href="/styles/valentijn.css">
+</head>
+
+        <body>
+          <header class="header">
+    <a href="/"><img class="icon" src="/assets/milledoni-icon.png"></a>
+
+    <div class="header-right">
+
+    <img class="filter" src="/assets/filter.png">
+    <a href="/lijst"><img class="list" src="/assets/list.png"></a>
+    <img class="profile-icon" src="/assets/profile-icon.png">
+    
+    </div>
+   </header>
+
+    <div class="main">
+    <img class="main-img" src="/assets/image-1.png" alt="afbeelding achtergrond hartjes">
+    <div class="main-tekst">
+    <h1>Valentijn cadeaus</h1>
+    <p>De leukste cadeaus voor je geliefde</p>
+  </div>
+</div>
+
+<div class="layout">   
+
+<div class="left-side">
+<img class="ai" src="/assets/ai-search.png">
+</div>
+
+<div class="right-side">
+<ul class="product-lijst">
+  {% for product in products %}
+  <li class="product-kaart">
+    
+    <a href="/product/{{ product.id }}">
+    <img class="product-img" src="{{ product.image }}" alt="{{ product.name }}">
+    </a>
+
+    <form method="POST" action="/opslaan">
+    <input type="hidden" name="productId" value="{{ product.id }}">
+    <button type="submit" class="opslaan-knop">
+      <img class="opslaan" src="/assets/opslaan.png" alt="opslaan">
+    </button>
+  </form>
+
+    <h2>{{ product.name }}</h2>
+
+  </li>
+  {% endfor %}
+</ul>
+</div>
+</div>
+
+<footer>
+  <ul class="categorie-paginas">
+  <li><a href="/valentijnsdag">Valentijn cadeaus </a>
+  <li><a href="/cultuur">Culturele cadeaus</a>
+  </ul>
+  </footer>
+
+</body>
+</html>

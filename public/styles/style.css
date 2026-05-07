@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  /* links en rechts spatie tussen de items */
+  align-items: center;
+  /* verticaal zetten */
+  padding: 5px;
+  /*eerste is de hoogte tweede is ruimte aan de zijkant*/
+  position: fixed;
+  /* hierdoor word de header sticky het beweegt dus mee */
+  top: 0;
+  /* Afstand vanaf de bovenkant van het scherm */
+  z-index: 1000;
+  /* hierdoor blijft de header voor alle andere dingen op de pagina */
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(104, 2, 2, 0.436);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.625rem, 0.3125rem + 1.5625vw, 1.5625rem);
+  /* ruimte tussen icons */
+}
+
+.icon {
+  width: clamp(6.25rem, 4.1667rem + 10.4167vw, 12.5rem);
+  height: auto;
+}
+
+.filter {
+  width: clamp(1.25rem, 0.8333rem + 2.0833vw, 2.5rem);
+  height: auto;
+}
+
+.list {
+  width: clamp(6.25rem, 4.1667rem + 10.4167vw, 12.5rem);
+  height: auto;
+}
+
+.profile-icon {
+  width: clamp(1.25rem, 0.8333rem + 2.0833vw, 2.5rem);
+  height: auto;
+}
+
+.layout {
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    /* naast elkaar */
+    align-items: flex-start;
+  }
+}
+
+.ai {
+  width: 100%;
+  left: 0;
+  right: 0;
+  height: auto;
+  border-radius: 20px;
+  position: fixed;
+  top: 400px;
+  /* hierdoor plaats het ondraan dit is de afstand vanaf de onderkant */
+  z-index: 1000;
+  /* hiermee komt de search boven alles */
+
+  @media (min-width:768px) {
+    position: sticky;
+    top: 20px;
+    margin-top: 45px;
+    margin-left: 25px;
+    width: 300px;
+
+    /*padding styling van de searchbar*/
+    padding-top: 350px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: red;
+    background: #B20000;
+    top: 0;
+    /* Afstand vanaf de bovenkant van het scherm */
+    z-index: 30;
+    /* hierdoor blijft de header voor alle andere dingen op de pagina */
+  }
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-lijst {
+  list-style: none;
+  /*Zodat je dan geen puntjes ziet van de lijst*/
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width:425px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 3 kaarten komen hierdoor naast elkaar te staan*/
+    gap: 20px;
+  }
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 kaarten komen hierdoor naast elkaar te staan*/
+    gap: 40px;
+  }
+
+}
+
+.product-kaart {
+  border: 2px solid red;
+  border: 2px solid #B20000;
+  padding: 5px;
+  /*Baseline Widely available across major browsers*/
+  text-align: center;
+  background: white;
+  gap: 20px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.product-img {
+  width: 100%;
+  height: 200px;
+  /*dit is de hoogte dat alle img krijgen*/
+  object-fit: cover;
+  /* hierdoor vult de afbeelding het vakje zonder te vervormen*/
+}
+
+.product-kaart h2 {
+  font-size: 16px;
+  margin-top: 10px;
+
+}
+
+.opslaan-knop {
+  position: absolute;
+  top: 10px;
+  /* verplaatsing naar boven in de product kaart img */
+  right: 10px;
+  /* verplaatsing van rechts in de product kaart img */
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 7px;
+}
+
+.opslaan {
+  width: 30px;
+}
+
+.categorie-paginas a {
+  color: white;
+  text-decoration: none;
+}
+
+.categorie-paginas {
+  list-style: none;
+  text-decoration: underline white;
+  display: flex;
+  flex-direction: column;
+  gap:25px;
+}
+
+.categorie-paginas a:hover {
+  color: blue;
+}
+
+footer {
+  margin-top: 50px;
+    background-color: red;
+  background-color: #B20000;
+  padding: 150px;
+  margin-left: 0;
+  margin-right: 0;
+}

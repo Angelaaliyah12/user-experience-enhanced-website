@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milledoni</title>
+    <link rel="stylesheet" href="/styles/style.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <img class="icon" src="/assets/milledoni-icon.png" alt="milledoni icoon">
+
+      <div class="header-right">
+        <img class="filter" src="/assets/filter.png" alt="filter icoon">
+        <a href="/lijst"  aria-label="ga naar je lijst">
+          <img class="list" src="/assets/list.png" alt="icoon naar lijst ">
+        </a>
+        <img class="profile-icon" src="/assets/profile-icon.png" alt="profile icon">
+      </div>
+    </header>
+    <main>
+      <div class="layout">
+        <div class="left-side">
+          <img class="ai" src="/assets/ai-search.png" alt="zoekbalk">
+        </div>
+
+        <div class="right-side">
+          <ul class="product-lijst">
+            {% for product in products %}
+              <li class="product-kaart">
+                <a href="/product/{{ product.id }}"  aria-label="Bekijk {{ product.name }}">
+                  <img class="product-img" src="{{ product.image }}" alt=" Bekijk {{ product.name }}">
+                </a>
+
+                <form method="POST" action="/opslaan">
+                  <input type="hidden" name="productId" value="{{ product.id }}">
+                  <button type="submit" class="opslaan-knop" aria-label="sla cadeau op">
+                    <img class="opslaan" src="/assets/opslaan.png" alt="opslaan knop">
+                  </button>
+                </form>
+
+                <h2>{{ product.name }}</h2>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <ul class="categorie-paginas">
+        <li><a href="/valentijnsdag" aria-label="ga naar valentijnsdag pagina">Valentijn cadeaus </a></li>
+        <li><a href="/cultuur" aria-label="ga naar cultuur pagina">Culturele cadeaus</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

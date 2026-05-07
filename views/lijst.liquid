@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/styles/lijst.css">
+</head>
+
+<body>
+  <header class="header">
+   <a href="/"> <img class="icon" src="/assets/milledoni-icon.png"></a>
+
+    <div class="header-right">
+
+    <img class="filter" src="/assets/filter.png">
+    <img class="profile-icon" src="/assets/profile-icon.png">
+    
+    </div>
+   </header> 
+<h1>Mijn lijst</h1>
+<a href="/">← Terug naar Home pagina</a>
+
+<ul class="product-lijst">
+  {% for product in products %}
+    <li class="product-kaart">
+      <h2>{{ product.milledoni_products_id.name }}</h2>
+
+      <a href="/product/{{ product.milledoni_products_id.id }}">
+        <img class="product-img" src="{{ product.milledoni_products_id.image }}" alt="{{ product.milledoni_products_id.name }}">
+      </a>
+       <form method="POST" action="/verwijder">
+        <input type="hidden" name="id" value="{{ product.id }}">
+        <button type="submit">Verwijder</button>
+      </form>
+      
+    </li>
+  {% endfor %}
+</ul>
+
+
+<footer>
+  <ul class="categorie-paginas">
+  <li><a href="/valentijnsdag">Valentijn cadeaus </a>
+  <li><a href="/cultuur">Culturele cadeaus</a>
+  </ul>
+  </footer>
+
+</body>
+</html>
