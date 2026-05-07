@@ -173,6 +173,7 @@ body {
   color:#B20000;
   background-color: white;
   border-color: #B20000;
+  cursor:progress;
 }
 .error{
   color: white;
