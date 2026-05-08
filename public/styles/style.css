@@ -28,7 +28,7 @@ body {
   /* ruimte tussen icons */
 }
 
-.logo {
+.icon {
   width: clamp(6.25rem, 4.1667rem + 10.4167vw, 12.5rem);
   height: auto;
 }
