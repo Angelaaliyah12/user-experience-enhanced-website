@@ -40,18 +40,19 @@
 
         <div class="right-side">
           <ul class="product-lijst">
-              <a href="/product/{{ product.id }}"  aria-label="Bekijk {{ product.name }}">
-            {% if product.image %}
-              <img width="150" height="200"class="product-img" 
-                src="{{ product.image }}" alt="Bekijk {{ product.name }}"> 
-            {% else %}
-               <picture>
-                  <source srcset="/assets/placeholder.avif" type="image/avif">
-                  <source srcset="/assets/placeholder.webp" type="image/webp">
-               <img width="150" height="200" class="product-img" 
-                src="/assets/placeholder.png"  alt="Bekijk {{ product.name }}"> 
-              </picture>
-           {% endif %}
+                    {% for product in products %}
+              <li class="product-kaart">
+                <a href="/product/{{ product.id }}"  aria-label="Bekijk {{ product.name }}">
+                 
+      {% if product.image %}
+                     <img width="150" height="200"class="product-img" src="{{ product.image }}" alt="Bekijk {{ product.name }}">
+       {% else %}
+        <picture>
+          <source srcset="/assets/placeholder.avif" type="image/avif">
+          <source srcset="/assets/placeholder.webp" type="image/webp">
+          <img width="150" height="200" class="product-img" src="/assets/placeholder.png"  alt="Placeholder afbeelding">
+        </picture>
+      {% endif %}
                 </a>
                 <form method="POST" action="/opslaan">
                   <input type="hidden" name="productId" value="{{ product.id }}">
