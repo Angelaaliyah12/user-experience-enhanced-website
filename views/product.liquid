@@ -1,6 +1,5 @@
-{% render 'partials/head.liquid' %}
-</head>
-
+{% render 'partials/header.liquid' %}
+<body>
 <h1>{{ product.name }}</h1>
 
 <img src="{{ product.image }}" alt="{{ product.name }}">
@@ -10,5 +9,5 @@
 {% endif %}
 
 <a href="/">← Terug naar Home pagina</a>
-
-{% render 'partials/foot.liquid' %}
+</body>
+{% render 'partials/footer.liquid' %}
