@@ -40,10 +40,7 @@
 
         <div class="right-side">
           <ul class="product-lijst">
-            {% for product in products %}
-              <li class="product-kaart">
-
-                <a href="/product/{{ product.id }}"  aria-label="Bekijk {{ product.name }}">
+              <a href="/product/{{ product.id }}"  aria-label="Bekijk {{ product.name }}">
             {% if product.image %}
               <img width="150" height="200"class="product-img" 
                 src="{{ product.image }}" alt="Bekijk {{ product.name }}"> 
