@@ -1,34 +1,42 @@
 
 # Enhanced website
-Ontwerp en maak een interactieve website die snel laadt en prettig te gebruiken is.
-
-De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/enhanced-website/blob/main/docs/INSTRUCTIONS.md)
-
+- In deze readme ga ik het hebben over de Milledoni website waarbij ik enhancement zal toevoegen en interacties aanmaak.
+live link: https://user-experience-enhanced-website-fjv3.onrender.com/
 
 ## Inhoudsopgave
 
   * [Beschrijving](#beschrijving)
   * [Gebruik](#gebruik)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
 ## Beschrijving
-<!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar je live site 🌐-->
+- In deze sprint heb ik gefocused op de opslaan knop. De verschillende states ervan en het verwerkt in code.
+
 
 ## Gebruik
-<!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
+### Design homepage
+<img width="223" height="349" alt="image" src="https://github.com/user-attachments/assets/7ff55f01-bef5-49ba-81ab-900106207e7d" />
 
-## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
+### Opslaan knop design
+- Hierbij volgen de designs van de verschillende states van mijn opslaan knop:
+  <img width="260" height="68" alt="image" src="https://github.com/user-attachments/assets/0b2e6050-0450-4553-b897-7099eb2c6b53" />
+### Homepage met de opslaan knop
+<img width="940" height="400" alt="image" src="https://github.com/user-attachments/assets/c47d33da-b29e-4d34-a9ea-786fdd344776" />
+#### Succes state op homepage
+<img width="941" height="399" alt="image" src="https://github.com/user-attachments/assets/2be65ab2-bff4-403a-89e5-049bbb7ce374" />
+- Met de opslaan kno
 
-## Installatie
-<!-- Bij Installatie staat hoe een andere developer aan jouw repo kan werken -->
 
 ## Bronnen
+voor de opslaan knop:
+https://github.com/fdnd-task/user-experience-enhanced-website/blob/main/docs/client-side-scripting-for-ux.md
+
+- Om meerdere formulieren te kunnen selecteren:
+https://www.google.com/search?q=meerdere+formulieren+selecteren+javascript&oq=meerdere+formulieren+selecteren+javas&gs_lcrp=EgZjaHJvbWUqBwgBECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRifBTIHCAMQIRifBTIHCAQQIRifBTIHCAUQIRifBTIHCAYQIRifBTIHCAcQIRifBdIBCTEyNjM1ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8 (optie 2)
+
+- Hoe je een knop disable kan maken:
+https://coreui.io/blog/how-to-disable-a-button-in-javascript/*/
 
 ## Licentie
 
