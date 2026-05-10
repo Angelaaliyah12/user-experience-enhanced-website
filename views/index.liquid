@@ -45,7 +45,7 @@
                 <a href="/product/{{ product.id }}"  aria-label="Bekijk {{ product.name }}">
                  
       {% if product.image %}
-                     <img width="150" height="200"class="product-img" src="{{ product.image }}" alt="Bekijk {{ product.name }}">
+                     <img width="150" height="200" class="product-img" src="{{ product.image }}" alt="Bekijk {{ product.name }}">
        {% else %}
         <picture>
           <source srcset="/assets/placeholder.avif" type="image/avif">
@@ -61,7 +61,7 @@
                   </button>
                 </form>
 
-                <h2>{{ product.name }}</h2>
+                <p><b>{{ product.name }}</b></p>
               </li>
             {% endfor %}
           </ul>
